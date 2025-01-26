@@ -62,6 +62,7 @@ def start_starrail():
     vol_group = parser.add_group('Volume Control', '')
     
     vol_parser = subparsers.add_parser('auto-mute', help='', description='')
+    vol_parser.add_argument('--interval', '-i', type=float, default=0.3, help='Interval delay (seconds) between checks')
     vol_parser.set_defaults(func=entrypoint_handler.auto_mute_activate)
     parser.add_parser_to_group(vol_group, vol_parser)
     

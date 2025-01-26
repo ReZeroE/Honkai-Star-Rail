@@ -93,15 +93,16 @@ class HonkaiStarRail:
             starrail_proc = self.get_starrail_process()
             headers = [Printer.to_lightblue(title) for title in ["Title", "HSR Real-time Status"]]
             
-            data_dict = {
-                "Status"            : "N/A",
-                "Process ID"        : "N/A",
-                "Started On"        : "N/A",
-                "CPU Percent"       : "N/A",
-                "CPU Affinity"      : "N/A",
-                "IO Operations"     : "N/A",
-                "RAM Usage"         : "N/A"
-            }
+            data_list = [
+                "Status",
+                "Process ID",
+                "Started On",
+                "CPU Percent",
+                "CPU Affinity",
+                "IO Operations",
+                "RAM Usage"
+            ]
+            data_dict = {data: "N/A" for data in data_list}
             
             if starrail_proc != None: # Is running
                 data_dict["Status"]          = bool_to_str(starrail_proc.is_running())

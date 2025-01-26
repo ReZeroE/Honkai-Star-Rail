@@ -19,6 +19,11 @@ The `starrail` package is a CLI (command-line interface) tool designed for manag
 
 
 ### Key Features:
+
+- **(NEW) Volume Control**
+   - Auto-Mute: Automatically mute the game when it's not in focus and unmute it when it regains focus.
+   - Volume Control: Set the game's individual application volume from the CLI.
+
 - **Game Launch Control**
    - Start/Stop the game application directory from the terminal (skips launcher).
    - Schedule the game to start/stop at any given time (i.e. 10:30AM).
@@ -38,6 +43,8 @@ The `starrail` package is a CLI (command-line interface) tool designed for manag
 - **Other Features**
    - Screenshots: Open the screenshots directory from the CLI without the game launcher. 
    - Official Pages: Open the official HoyoVerse web pages easily from the CLI.
+
+For more information, see the Usage Guide section below.
 
 <br/>
 

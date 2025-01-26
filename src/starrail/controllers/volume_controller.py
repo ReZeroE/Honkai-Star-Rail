@@ -12,26 +12,45 @@ class VolumeController:
         
 
     def mute(self):
-        pass
+        starrail_proc = self.starrail.get_starrail_process()
+        if starrail_proc == None:
+            aprint(Printer.to_lightred(f"Honkai: Star Rail not running."))
+            return False
+        return self.mute_pid(starrail_proc, mute=True)
+    
     
     def unmute(self):
-        pass
+        starrail_proc = self.starrail.get_starrail_process()
+        if starrail_proc == None:
+            aprint(Printer.to_lightred(f"Honkai: Star Rail not running."))
+            return False
+        return self.mute_pid(starrail_proc, mute=False)
+    
     
     def set_volume(self, level: int):
         pass
 
 
-    def activate_unfocus_mute(self):
+    def activate_unfocus_mute(self, check_interval=0.3):
         try:
             aprint(f"Auto-Mute: {Printer.to_lightgreen("ACTIVATED")}")
             
             while True:
                 starrail_proc = self.starrail.get_starrail_process()
+                if starrail_proc == None:
+                    aprint(f"Honkai: Star Rail not running.\nAuto-Mute {Printer.to_lightred("DEACTIVATED")}")
+                    return
+                
+                res = False
                 if self.starrail.is_focused():
-                    self.mute_pid(starrail_proc, mute=False)
+                    res = self.mute_pid(starrail_proc, mute=False)
                 else:
-                    self.mute_pid(starrail_proc, mute=True)
-                time.sleep(1)
+                    res = self.mute_pid(starrail_proc, mute=True)
+                # if res == False:
+                #     aprint("Failed to mute Honkai: Star Rail.")
+                    
+                time.sleep(check_interval)
+        
         except KeyboardInterrupt:
             aprint(f"Auto-Mute: {Printer.to_lightred("DEACTIVATED")}")
     

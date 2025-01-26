@@ -36,7 +36,7 @@ class StarRailEntryPointHandler:
     # ================================================
     
     def auto_mute_activate(self, args):
-        self.volume_controller.activate_unfocus_mute()
+        self.volume_controller.activate_unfocus_mute(args.interval)
     
     
     # ================================================

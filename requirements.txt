@@ -8,3 +8,4 @@ pywin32
 screeninfo
 schedule
 pyreadline3
+pycaw
