@@ -27,31 +27,31 @@ import os
 # ==========| MODULE/GAME CONSTANTS | ==========
 # ==============================================
 
-BASENAME            = "StarRail CLI"
-SHORTNAME           = "StarRail"
-COMMAND             = "starrail"
-VERSION             = "1.0.5"
-VERSION_DESC        = "Beta"
-DEVELOPMENT         = VERSION_DESC.lower() != "stable"
+BASENAME                = "StarRail CLI"
+SHORTNAME               = "StarRail"
+COMMAND                 = "starrail"
+VERSION                 = "1.0.5"
+VERSION_DESC            = "Beta"
+DEVELOPMENT             = VERSION_DESC.lower() != "stable"
 
-TIME_FORMAT         = "%H:%M:%S"
-DATETIME_FORMAT     = "%Y-%m-%d %H:%M:%S"
+TIME_FORMAT             = "%H:%M:%S"
+DATETIME_FORMAT         = "%Y-%m-%d %H:%M:%S"
 
-GAME_NAME           = "Honkai: Star Rail"
-GAME_FILENAME       = "StarRail.exe"
-GAME_FILE_PATH      = f"Star Rail/Game/{GAME_FILENAME}"
-GAME_FILE_PATH_NEW  = f"Star Rail Games/{GAME_FILENAME}"
+GAME_NAME               = "Honkai: Star Rail"
+GAME_FILENAME           = "StarRail.exe"
+GAME_FILE_PATH          = f"Star Rail/Game/{GAME_FILENAME}"
+GAME_FILE_PATH_GLOBAL   = f"games/Star Rail Games/{GAME_FILENAME}"
 
-AUTHOR              = "Kevin L."
-AUTHOR_DETAIL       = f"{AUTHOR} - kevinliu@vt.edu - Github: ReZeroE"
-REPOSITORY          = "https://github.com/ReZeroE/StarRail"
-ISSUES              = f"{REPOSITORY}/issues"
+AUTHOR                  = "Kevin L."
+AUTHOR_DETAIL           = f"{AUTHOR} - kevinliu@vt.edu - Github: ReZeroE"
+REPOSITORY              = "https://github.com/ReZeroE/StarRail"
+ISSUES                  = f"{REPOSITORY}/issues"
 
-HOMEPAGE_URL        = "https://hsr.hoyoverse.com/en-us/home"
-HOMEPAGE_URL_CN     = "https://sr.mihoyo.com/"
-HOYOLAB_URL         = "https://www.hoyolab.com/home"
-YOUTUBE_URL         = "https://www.youtube.com/channel/UC2PeMPA8PAOp-bynLoCeMLA"
-BILIBILI_URL        = "https://space.bilibili.com/1340190821"
+HOMEPAGE_URL            = "https://hsr.hoyoverse.com/en-us/home"
+HOMEPAGE_URL_CN         = "https://sr.mihoyo.com/"
+HOYOLAB_URL             = "https://www.hoyolab.com/home"
+YOUTUBE_URL             = "https://www.youtube.com/channel/UC2PeMPA8PAOp-bynLoCeMLA"
+BILIBILI_URL            = "https://space.bilibili.com/1340190821"
 
 
 # ==============================================

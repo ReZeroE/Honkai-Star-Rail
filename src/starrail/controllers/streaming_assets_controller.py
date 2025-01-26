@@ -7,7 +7,7 @@ from enum import Enum
 from starrail.config.config_handler import StarRailConfig
 
 from starrail.utils.utils import aprint, Printer
-from starrail.constants import WEBCACHE_IGNORE_FILETYPES, GAME_FILE_PATH, GAME_FILE_PATH_NEW
+from starrail.constants import WEBCACHE_IGNORE_FILETYPES, GAME_FILE_PATH, GAME_FILE_PATH_GLOBAL
 from starrail.utils.binary_decoder import StarRailBinaryDecoder
 
 

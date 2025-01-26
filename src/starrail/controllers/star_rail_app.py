@@ -132,6 +132,7 @@ class HonkaiStarRail:
             else:
                 print_status()
         except KeyboardInterrupt:
+            os.system("cls")
             aprint("Status reading stopped.")
             raise SRExit()
           
@@ -139,11 +140,11 @@ class HonkaiStarRail:
         # print(Printer.to_lightpurple("\n - Game Configuration Table -"))
         headers = [Printer.to_lightblue(title) for title in ["Title", "Details", "Relevant Command"]]
         data = [
-            ["Game Version", self.fetch_game_version(), color_cmd("starrail version")],
-            ["Game Executable", os.path.normpath(self.config.game_path), color_cmd("starrail start/stop")],
-            ["Game Screenshots", self.__get_screenshot_path(), color_cmd("starrail screenshots")],
-            ["Game Logs", self.__get_log_path(), color_cmd("starrail game-logs")],
-            ["Game (.exe) SHA256", HashCalculator.SHA256(self.config.game_path) if self.config.game_path.exists() else None, ""]
+            ["Game Version",        self.fetch_game_version(),                  color_cmd("starrail version")],
+            ["Game Executable",     os.path.normpath(self.config.game_path),    color_cmd("starrail start/stop")],
+            ["Game Screenshots",    self.__get_screenshot_path(),               color_cmd("starrail screenshots")],
+            ["Game Logs",           self.__get_log_path(),                      color_cmd("starrail game-logs")],
+            ["Game (.exe) SHA256",  HashCalculator.SHA256(self.config.game_path) if self.config.game_path.exists() else None, ""]
         ]
         for row in data:
             row[0] = Printer.to_lightpurple(row[0])

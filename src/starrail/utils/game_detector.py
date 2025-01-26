@@ -6,7 +6,7 @@ from concurrent import futures
 from multiprocessing import Manager
 import queue
 
-from starrail.constants import GAME_FILENAME, GAME_FILE_PATH, GAME_FILE_PATH_NEW, MIN_WEAK_MATCH_EXE_SIZE
+from starrail.constants import GAME_FILENAME, GAME_FILE_PATH, GAME_FILE_PATH_GLOBAL, MIN_WEAK_MATCH_EXE_SIZE
 from starrail.exceptions.exceptions import *
 
 
@@ -43,7 +43,7 @@ class StarRailGameDetector:
                 self.weak_matches.put(abs_path)
 
                 # Check if the game's entire path is in the path found
-                if os.path.normpath(GAME_FILE_PATH) in abs_path or os.path.normpath(GAME_FILE_PATH_NEW) in abs_path:
+                if os.path.normpath(GAME_FILE_PATH) in abs_path or os.path.normpath(GAME_FILE_PATH_GLOBAL) in abs_path:
                     return os.path.join(root, name)
         
         return None
