@@ -86,7 +86,7 @@ else:
 
 # Global variables to identify whether the program is in CLI mode
 # MUST BE USED AS constants.CLI_MODE (only this accesses the re-bind value)
-CLI_MODE        = False
+CLI_MODE = False
 
 
 # ==============================================
@@ -100,7 +100,7 @@ RECORDER_WINDOW_INFO = {
     "border-radius": 10
 }
 
-# Recording window preset size calibrated using:
+# Recording popup window preset size calibrated using:
 CALIBRATION_MONITOR_INFO = {
     "width": 3840,
     "height": 2160

@@ -133,8 +133,7 @@ class HonkaiStarRail:
         except KeyboardInterrupt:
             aprint("Status reading stopped.")
             raise SRExit()
-    
-            
+          
     def show_config(self):
         # print(Printer.to_lightpurple("\n - Game Configuration Table -"))
         headers = [Printer.to_lightblue(title) for title in ["Title", "Details", "Relevant Command"]]
@@ -353,6 +352,3 @@ class HonkaiStarRail:
     def proc_is_starrail(self, starrail_proc: psutil.Process):
         return starrail_proc.is_running() and Path(starrail_proc.exe()) == Path(self.config.game_path)
 
-
-
-    

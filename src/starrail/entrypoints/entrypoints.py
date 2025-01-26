@@ -56,6 +56,18 @@ def start_starrail():
 
 
     # ================================================
+    # ==================| TESTING | ==================
+    # ================================================
+    
+    vol_group = parser.add_group('Volume Control', '')
+    
+    vol_parser = subparsers.add_parser('auto-mute', help='', description='')
+    vol_parser.set_defaults(func=entrypoint_handler.auto_mute_activate)
+    parser.add_parser_to_group(vol_group, vol_parser)
+    
+    
+
+    # ================================================
     # ==================| PROJECT | ==================
     # ================================================
     

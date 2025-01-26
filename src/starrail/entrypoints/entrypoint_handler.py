@@ -16,6 +16,7 @@ from starrail.controllers.star_rail_app import HonkaiStarRail
 from starrail.controllers.web_controller import StarRailWebController
 from starrail.controllers.automation_controller import StarRailAutomationController
 from starrail.controllers.c_click_controller import ContinuousClickController
+from starrail.controllers.volume_controller import VolumeController
 
 from starrail.bin.loader.loader import Loader
 from starrail.bin.scheduler.starrail_scheduler import StarRailScheduler, OperationTypes
@@ -27,11 +28,21 @@ class StarRailEntryPointHandler:
         self.web_controller         = StarRailWebController()
         self.scheduler              = StarRailScheduler(self.star_rail) # Only the start/stop is used from the starrail instance
         self.automation_controller  = StarRailAutomationController(self.star_rail)
+        self.volume_controller      = VolumeController(self.star_rail)
+    
+    
+    # ================================================
+    # ==================| TESTING | ==================
+    # ================================================
+    
+    def auto_mute_activate(self, args):
+        self.volume_controller.activate_unfocus_mute()
     
     
     # ================================================
     # ==================| PROJECT | ==================
     # ================================================
+    
     def about(self, args):
         headers = [Printer.to_lightblue(title) for title in ["Title", "Description"]]
         data = [

@@ -180,6 +180,7 @@ Below is a brief overview of all the features supported by the `starrail` packag
 - [Misc Utilities](https://github.com/ReZeroE/StarRail/wiki/9.-Misc-Utilities)
    - View Screenshots
    - View Game Logs
+   - View Session Runtime
   
 <br/>
 
@@ -515,6 +516,7 @@ To get the runtime of the current Honkai: Star Rail session (how long the game h
 ```shell
 > starrail runtime
 ```
+Restarting or exiting the game will reset the session runtime.
 
 <br/>
 
